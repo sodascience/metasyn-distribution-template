@@ -1,0 +1,11 @@
+{
+    "plugin_name": "llm",
+    "user_name": "Raoul Schram",
+    "email": "r.d.schram@uu.nl",
+    "__plugin_slug": "metasyn-{{ cookiecutter.plugin_name|lower|replace(' ', '-') }}",
+    "__package_name": "{{ cookiecutter.plugin_name|lower|replace(' ', '_') }}",
+    "__plugin_camel": "{{ cookiecutter.plugin_name|replace(' ', '') }}",
+    "privacy": "none",
+    "__decorate": "@metadist_{{ cookiecutter.__package_name }}",
+    "__metadist_import": "from metasyncontrib.{{ cookiecutter.__package_name }}.base import metadist_{{ cookiecutter.__package_name }}"
+}

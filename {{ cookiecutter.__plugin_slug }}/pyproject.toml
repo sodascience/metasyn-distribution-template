@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools-scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.__plugin_slug }}"
+authors = [
+    {name = "{{ cookiecutter.user_name }}", email = "{{ cookiecutter.email }}"},
+]
+description = "Plugin package for metasyn with {{ cookiecutter.plugin_name|lower }}."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["metasyn", "{{ cookiecutter.plugin_name }}"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+	"metasyn",
+	"polars",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = [
+	"pytest", "pylint", "pydocstyle", "mypy", "flake8", "nbval",
+]
+
+[tool.setuptools]
+packages = ["metasyncontrib"]
+
+[project.entry-points."metasyn.distribution_provider"]
+{{ cookiecutter.__package_name }} = "metasyncontrib.{{ cookiecutter.__package_name }}.provider:{{ cookiecutter.__plugin_camel }}Provider"

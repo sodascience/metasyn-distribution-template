@@ -1,0 +1,1 @@
+include metasyncontrib/{{ cookiecutter.__package_name }}/py.typed
