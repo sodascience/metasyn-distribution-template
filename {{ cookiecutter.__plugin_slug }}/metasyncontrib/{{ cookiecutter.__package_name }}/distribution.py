@@ -5,7 +5,7 @@ from metasyn.distribution.base import BaseDistribution
 {{ cookiecutter.__metadist_import }}
 
 
-@{{ cookiecutter.__decorate }}(implements="{{ plugin_name }}.{{ plugin_name }}", var_type="???")  # Change the variable type to the correct one.
+@{{ cookiecutter.__decorate }}(implements="{{ cookiecutter.plugin_name }}.{{ cookiecutter.plugin_name }}", var_type="???")  # Change the variable type to the correct one.
 class {{ cookiecutter.__plugin_camel }}Distribution(BaseDistribution):
     """{{ cookiecutter.plugin_name }} distribution."""
 
